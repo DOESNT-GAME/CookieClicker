@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker</title>
+    <link rel="stylesheet" href="click.css">
+</head>
+ 
+<p id='intro'>Welcome to Cookie Clicker</p>
+<body>
+    <br>
+    <p id='bal'>Ваш баланс: <span id='balance',>0$</span></char></p>
+    <h2 id='kek'>За клик: <span2 id='forclick'>1$</span2></h2>
+    <br>
+    <button id = 'cookie'><img src="cookie.png"></button>
+    <br>
+    <input type='button', id='upb1', value = 'Улучшить'>
+    <span id = 'firstupt', >20$</span> 
+    <br>
+    <input type='button', id='upb2', value = 'Улучшить'>
+    <span id = 'upt2', >2000$</span> 
+    <script>
+        let forclick = 1;// Кол-во денег, получаемое за клик
+        let money = 0; // Кол-во денег
+        let cash = money + "$"; // Отображение денег
+        let firstup = 20; // цена за 1 улучшение
+        let up2 = 2000; // цена за 2 улучшение
+        cookie.onclick = function()//При клике
+        {
+            money = money + forclick;
+            cash = money + "$";
+            document.getElementById('balance').innerHTML=cash;
+        }
+        upb1.onclick = function()//Улучшение
+        {
+            if(money >= firstup)
+            {
+                money = money - firstup;
+                firstup = Math.round(firstup * 1.5);
+                forclick = forclick + 1;
+                cash = money + "$";
+                document.getElementById('firstupt').innerHTML = firstup;
+                document.getElementById('balance').innerHTML=cash;
+                document.getElementById('forclick').innerHTML= forclick + '$';
+            }
+        }
+        upb2.onclick = function()//Улучшение 2
+        {
+            if(money >= up2)
+            {
+                money = money - up2;
+                up2 = Math.round(up2 * 1.5);
+                forclick = forclick + 25;
+                cash = money + "$";
+                document.getElementById('upt2').innerHTML = upt2;
+                document.getElementById('balance').innerHTML=cash;
+                document.getElementById('forclick').innerHTML= forclick + '$';
+            }
+        }
+    </script>
+</body>
+</html>
