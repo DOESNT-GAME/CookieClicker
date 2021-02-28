@@ -20,7 +20,7 @@
     <span id = 'firstupt', >20$</span> 
     <br>
     <input type='button', id='upb2', value = 'Улучшить'>
-    <span id = 'upt2', >2000$</span> 
+    <span id = 'upt2', value='2000$' >2000$</span> 
     <script>
         let forclick = 1;// Кол-во денег, получаемое за клик
         let money = 0; // Кол-во денег
@@ -39,10 +39,10 @@
             if(money >= firstup)
             {
                 money = money - firstup;
-                firstup = Math.round(firstup * 1.5);
+                firstup = Math.round(firstup * 1.2);
                 forclick = forclick + 1;
                 cash = money + "$";
-                document.getElementById('firstupt').innerHTML = firstup;
+                document.getElementById('firstupt').innerHTML = firstup + '$';
                 document.getElementById('balance').innerHTML=cash;
                 document.getElementById('forclick').innerHTML= forclick + '$';
             }
@@ -52,12 +52,12 @@
             if(money >= up2)
             {
                 money = money - up2;
-                up2 = Math.round(up2 * 1.5);
-                forclick = forclick + 25;
+                up2 = Math.round(up2 * 1.2);
+                forclick = forclick + 10;
                 cash = money + "$";
-                document.getElementById('upt2').innerHTML = upt2;
-                document.getElementById('balance').innerHTML=dicash;
-                document.getElementById('forclick').innerHTML= forclick + '$';
+                document.getElementById('upt2').innerHTML = up2 + '$';
+                document.getElementById('balance').innerHTML=cash;
+                document.getElementById('forclick').innerHTML=forclick + '$';
             }
         }
     </script>
