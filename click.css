@@ -19,3 +19,8 @@
 #forclick{
     color:rgb(37, 185, 62)
 }
+#fence{
+    width: 99%;
+    height: 2px;
+    background-color: gray;
+}
