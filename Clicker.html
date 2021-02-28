@@ -9,11 +9,11 @@
 </head>
  
 <p id='intro'>Welcome to Cookie Clicker</p>
+<div class="block", id ='fence'></div> 
 <body>
     <br>
     <p id='bal'>Ваш баланс: <span id='balance',>0$</span></char></p>
     <h2 id='kek'>За клик: <span2 id='forclick'>1$</span2></h2>
-    <br>
     <button id = 'cookie'><img src="cookie.png"></button>
     <br>
     <input type='button', id='upb1', value = 'Улучшить'>
@@ -26,6 +26,7 @@
         let money = 0; // Кол-во денег
         let cash = money + "$"; // Отображение денег
         let firstup = 20; // цена за 1 улучшение
+        let code;
         let up2 = 2000; // цена за 2 улучшение
         cookie.onclick = function()//При клике
         {
@@ -55,7 +56,7 @@
                 forclick = forclick + 25;
                 cash = money + "$";
                 document.getElementById('upt2').innerHTML = upt2;
-                document.getElementById('balance').innerHTML=cash;
+                document.getElementById('balance').innerHTML=dicash;
                 document.getElementById('forclick').innerHTML= forclick + '$';
             }
         }
