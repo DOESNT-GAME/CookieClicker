@@ -10,24 +10,78 @@
  
 <p id='intro'>Welcome to Cookie Clicker</p>
 <div class="block", id ='fence'></div> 
-<body>
+<body onload="init(); update();">
+    <div id="timer"></div>
+    <div id='bg' class='block'>
     <br>
-    <p id='bal'>Ваш баланс: <span id='balance',>0$</span></char></p>
-    <h2 id='kek'>За клик: <span2 id='forclick'>1$</span2></h2>
+    <span id='bal',value='Ваш баланс:'></span><span id='balance',>0$</span>
+    <br>
+    <span id='kek',value='За клик: '></span><span2 id='forclick'>1$</span2>
+    <br>
+    <span id='fsc',value='В секунду: '></span><span2 id='forsecm'>0$</span2>
+    <br>
     <button id = 'cookie'><img src="cookie.png"></button>
     <br>
+    <br>
+    <h3 id='ForClickHeader'>Улучшения производства печенья за клик</h3>
+    <br>
     <input type='button', id='upb1', value = 'Улучшить'>
-    <span id = 'firstupt', >20$</span> 
+    <span id = 'firstupt', >20$</span>
+    <br>
     <br>
     <input type='button', id='upb2', value = 'Улучшить'>
     <span id = 'upt2', value='2000$' >2000$</span> 
+    <br>
+    <br>
+    <input type='button', id='upb3', value = 'Улучшить'>
+    <span id = 'upt3', value='15000$' >15000$</span> 
+    <br>
+    <br>
+    <input type='button', id='upb4', value = 'Улучшить'>
+    <span id = 'upt4', value='100000$' >100000$</span> 
+    <br>
+    <br>
+    <input type='button', id='upb5', value = 'Улучшить'>
+    <span id = 'upt5', value='500000$' >500000$</span> 
+
+
+    <h4 id='ForSecHeader'>Улучшения производства печенья за секунду</h4> 
+    <br>
+    <input type='button', id='upforsecb1', value = 'Улучшить'>
+    <span id = 'upforsect1', >100$</span>
+    <br>
+    <br>
+    <input type='button', id='upforsecb2', value = 'Улучшить'>
+    <span id = 'upforsect2', value='5000$' >2000$</span> 
+    <br>
+    <br>
+    <input type='button', id='upforsecb3', value = 'Улучшить'>
+    <span id = 'upforsect3', value='20000$' >15000$</span> 
+    <br>
+    <br>
+    <input type='button', id='upforsecb4', value = 'Улучшить'>
+    <span id = 'upforsect4', value='1000000$' >100000$</span> 
+    <br>
+    <br>
+    <input type='button', id='upforsecb5', value = 'Улучшить'>
+    <span id = 'upforsect5', value='5000000$' >500000$</span> 
+    </div>
     <script>
         let forclick = 1;// Кол-во денег, получаемое за клик
         let money = 0; // Кол-во денег
         let cash = money + "$"; // Отображение денег
         let firstup = 20; // цена за 1 улучшение
-        let code;
+        let code; // переменная для кодов 
         let up2 = 2000; // цена за 2 улучшение
+        let up3 = 15000;
+        let up4 = 100000;
+        let up5 = 500000;
+        let forsec1 = 100;
+        let forsec2 = 5000;
+        let forsec3 = 20000;
+        let forsec4 = 100000;
+        let forsec5 = 500000;
+        let forsec = 0; // За 1 секунду.
         cookie.onclick = function()//При клике
         {
             money = money + forclick;
@@ -46,6 +100,10 @@
                 document.getElementById('balance').innerHTML=cash;
                 document.getElementById('forclick').innerHTML= forclick + '$';
             }
+            else
+            {
+                alert('Недостаточно денег\nВам необходимо ещё: ' + (firstup - money) + '$' );
+            }
         }
         upb2.onclick = function()//Улучшение 2
         {
@@ -59,6 +117,111 @@
                 document.getElementById('balance').innerHTML=cash;
                 document.getElementById('forclick').innerHTML=forclick + '$';
             }
+            else
+            {
+                alert('Недостаточно денег\nВам необходимо ещё: ' + (up2 - money) + '$' );
+            }
+        }
+        upb3.onclick = function()//Улучшение 3
+        {
+            if(money >= up3)
+            {
+                money = money - up3;
+                up3 = Math.round(up3 * 1.2);
+                forclick = forclick + 100;
+                cash = money + "$";
+                document.getElementById('upt3').innerHTML = up3 + '$';
+                document.getElementById('balance').innerHTML=cash;
+                document.getElementById('forclick').innerHTML=forclick + '$';
+            }
+            else
+            {
+                alert('Недостаточно денег\nВам необходимо ещё: ' + (up3 - money) + '$' );
+            }
+        }
+        upb4.onclick = function()//Улучшение 4
+        {
+            if(money >= up4)
+            {
+                money = money - up4;
+                up4 = Math.round(up4 * 1.2);
+                forclick = forclick + 500;
+                cash = money + "$";
+                document.getElementById('upt4').innerHTML = up4 + '$';
+                document.getElementById('balance').innerHTML=cash;
+                document.getElementById('forclick').innerHTML=forclick + '$';
+            }
+            else
+            {
+                alert('Недостаточно денег\nВам необходимо ещё: ' + (up3 - money) + '$' );
+            }
+        }
+        upb5.onclick = function()//Улучшение 4
+        {
+            if(money >= up5)
+            {
+                money = money - up5;
+                up5 = Math.round(up5 * 1.2);
+                forclick = forclick + 1000;
+                cash = money + "$";
+                document.getElementById('upt5').innerHTML = up5 + '$';
+                document.getElementById('balance').innerHTML=cash;
+                document.getElementById('forclick').innerHTML=forclick + '$';
+            }
+            else
+            {
+                alert('Недостаточно денег\nВам необходимо ещё: ' + (up3 - money) + '$' );
+            }
+        }
+        upforsecb1.onclick = function()
+        {
+            if(money >= forsec1)
+            {
+                money = money - forsec1;
+                forsec1 = Math.round(forsec1 * 1.2);
+                forsec = forsec + 1;
+                cash = money + "$";
+                document.getElementById('upforsect1').innerHTML = forsec1 + '$';
+                document.getElementById('balance').innerHTML=cash;
+                document.getElementById('forclick').innerHTML=forclick + '$';
+            }
+            else
+            {
+                alert('Недостаточно денег\nВам необходимо ещё: ' + (forsec1 - money) + '$' );
+            }
+        }
+        upforsecb2.onclick = function()
+        {
+            if(money >= forsec2)
+            {
+                money = money - forsec2;
+                forsec2 = Math.round(forsec2 * 1.2);
+                forsec = forsec + 10;
+                cash = money + "$";
+                document.getElementById('upforsect1').innerHTML = forsec2 + '$';
+                document.getElementById('balance').innerHTML=cash;
+                document.getElementById('forclick').innerHTML=forclick + '$';
+            }
+            else
+            {
+                alert('Недостаточно денег\nВам необходимо ещё: ' + (forsec2 - money) + '$' );
+            }
+        }
+        function tick()
+        {
+            money = money + forsec;
+            cash = money + "$";
+            document.getElementById('balance').innerHTML=cash;
+        }
+        function init()
+            {
+                setInterval(tick, 1000);
+            }
+        function update()
+        {
+            document.getElementById('bal').innerHTML = 'Ваш баланс: ';
+            document.getElementById('kek').innerHTML = 'За клик: ';
+            document.getElementById('fsc').innerHTML = 'В секунду ';
         }
     </script>
 </body>
