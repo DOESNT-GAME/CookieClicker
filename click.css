@@ -12,9 +12,10 @@ body{
     background: url(backgroundimg.png);
 }
 #intro{ 
+    font-style: italic;
     font-family: Arial, Helvetica, Verdana, sans-serif; /* Гарнитура шрифта */ 
     font-size: 200%; /* Размер текста */ 
-    font-weight: bold;
+    font-weight: 900;
     color: #833400;
     text-align:center;
 }
@@ -87,16 +88,18 @@ body{
     background-color: gray;
 }
 #ForClickHeader{
+    font-style: italic;
     text-align:center;
     color:rgb(161, 133, 40);
     font-size: 150%;
-    font-weight: bold;
+    font-weight: 800;
 }
 #ForSecHeader{
+    font-style: italic;
     text-align:center;
     color:rgb(161, 133, 40);
     font-size: 150%;
-    font-weight: bold;
+    font-weight: 800;
 }
 #upb1{
     display: inline-block;
