@@ -7,14 +7,16 @@
     <title>Cookie Clicker</title>
     <link rel="stylesheet" href="click.css">
 </head>
- 
+<div class=block, id="header">
+<br>
 <p id='intro'>Welcome to Cookie Clicker</p>
 <div class="block", id ='fence'></div> 
-<body onload="init(); update();">
+</div>
+<body onload="init(); update();", link="#008000">
     <div id="timer"></div>
     <div id='bg' class='block'>
     <br>
-    <span id='bal',value='Ваш баланс:'></span><span id='balance',>0$</span>
+    <span id='bal',value='Ваш баланс:'></span><span id='balance',maxlength='100'>0$</span>
     <br>
     <span id='kek',value='За клик: '></span><span2 id='forclick'>1$</span2>
     <br>
@@ -52,11 +54,11 @@
     <br>
     <br>
     <input type='button', id='upforsecb2', value = 'Улучшить'>
-    <span id = 'upforsect2', value='5000$' >2000$</span> 
+    <span id = 'upforsect2', value='5000$' >5000$</span> 
     <br>
     <br>
     <input type='button', id='upforsecb3', value = 'Улучшить'>
-    <span id = 'upforsect3', value='20000$' >15000$</span> 
+    <span id = 'upforsect3', value='20000$' >20000$</span> 
     <br>
     <br>
     <input type='button', id='upforsecb4', value = 'Улучшить'>
@@ -65,7 +67,23 @@
     <br>
     <input type='button', id='upforsecb5', value = 'Улучшить'>
     <span id = 'upforsect5', value='5000000$' >500000$</span> 
+    <br>
+    <br>
+    <br>
+    <div id='DOESEntertainment'>
+        <div>
+            Сделано 
+        </div>
+        <div><a href='https://vk.com/droblox'>
+            <font size="+1",color=#ff0000>@DOESNT</font></a></div>
+        <div>
+            в 2021 году
+        </div>
     </div>
+    <br>
+    <br>
+
+
     <script>
         let forclick = 1;// Кол-во денег, получаемое за клик
         let money = 0; // Кол-во денег
@@ -153,10 +171,10 @@
             }
             else
             {
-                alert('Недостаточно денег\nВам необходимо ещё: ' + (up3 - money) + '$' );
+                alert('Недостаточно денег\nВам необходимо ещё: ' + (up4 - money) + '$' );
             }
         }
-        upb5.onclick = function()//Улучшение 4
+        upb5.onclick = function()//Улучшение 5
         {
             if(money >= up5)
             {
@@ -170,7 +188,7 @@
             }
             else
             {
-                alert('Недостаточно денег\nВам необходимо ещё: ' + (up3 - money) + '$' );
+                alert('Недостаточно денег\nВам необходимо ещё: ' + (up5 - money) + '$' );
             }
         }
         upforsecb1.onclick = function()
@@ -183,7 +201,7 @@
                 cash = money + "$";
                 document.getElementById('upforsect1').innerHTML = forsec1 + '$';
                 document.getElementById('balance').innerHTML=cash;
-                document.getElementById('forclick').innerHTML=forclick + '$';
+                document.getElementById('forsecm').innerHTML=forsec + '$';
             }
             else
             {
@@ -198,20 +216,74 @@
                 forsec2 = Math.round(forsec2 * 1.2);
                 forsec = forsec + 10;
                 cash = money + "$";
-                document.getElementById('upforsect1').innerHTML = forsec2 + '$';
+                document.getElementById('upforsect2').innerHTML = forsec2 + '$';
                 document.getElementById('balance').innerHTML=cash;
-                document.getElementById('forclick').innerHTML=forclick + '$';
+                document.getElementById('forsecm').innerHTML=forsec + '$';
             }
             else
             {
                 alert('Недостаточно денег\nВам необходимо ещё: ' + (forsec2 - money) + '$' );
             }
         }
+        upforsecb3.onclick = function()
+        {
+            if(money >= forsec3)
+            {
+                money = money - forsec3;
+                forsec3 = Math.round(forsec3 * 1.2);
+                forsec = forsec + 100;
+                cash = money + "$";
+                document.getElementById('upforsect3').innerHTML = forsec3 + '$';
+                document.getElementById('balance').innerHTML=cash;
+                document.getElementById('forsecm').innerHTML=forsec + '$';
+            }
+            else
+            {
+                alert('Недостаточно денег\nВам необходимо ещё: ' + (forsec3 - money) + '$' );
+            }
+        }
+        upforsecb4.onclick = function()
+        {
+            if(money >= forsec4)
+            {
+                money = money - forsec4;
+                forsec4 = Math.round(forsec4 * 1.2);
+                forsec = forsec + 1000;
+                cash = money + "$";
+                document.getElementById('upforsect4').innerHTML = forsec4 + '$';
+                document.getElementById('balance').innerHTML=cash;
+                document.getElementById('forsecm').innerHTML=forsec + '$';
+            }
+            else
+            {
+                alert('Недостаточно денег\nВам необходимо ещё: ' + (forsec4 - money) + '$' );
+            }
+        }
+        upforsecb5.onclick = function()
+        {
+            if(money >= forsec5)
+            {
+                money = money - forsec5;
+                forsec5 = Math.round(forsec5 * 1.2);
+                forsec = forsec + 5000;
+                cash = money + "$";
+                document.getElementById('upforsect5').innerHTML = forsec5 + '$';
+                document.getElementById('balance').innerHTML=cash;
+                document.getElementById('forsecm').innerHTML=forsec + '$';
+            }
+            else
+            {
+                alert('Недостаточно денег\nВам необходимо ещё: ' + (forsec5 - money) + '$' );
+            }
+        }
         function tick()
         {
+            if (money <= 99999999999999999999)
+            {
             money = money + forsec;
             cash = money + "$";
             document.getElementById('balance').innerHTML=cash;
+            }
         }
         function init()
             {
@@ -221,7 +293,7 @@
         {
             document.getElementById('bal').innerHTML = 'Ваш баланс: ';
             document.getElementById('kek').innerHTML = 'За клик: ';
-            document.getElementById('fsc').innerHTML = 'В секунду ';
+            document.getElementById('fsc').innerHTML = 'В секунду '; 
         }
     </script>
 </body>
