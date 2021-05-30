@@ -29,7 +29,9 @@
     <br>
     <span id='fsc',value='В секунду: '></span><span2 id='forsecm'>0$</span2>
     <br>
-    <button id = 'cookie'><img src="cookie.png"></button>
+    <audio id="sound1" src="sound1.wav" preload="auto"></audio>
+    <audio id="sound2" src="sound2.wav" preload="auto"></audio>
+    <button id = 'cookie'><img src="cookie.png", ></button>
     <br>
     <br>
     <h3 id='ForClickHeader'>Улучшения производства печенья за клик</h3>
@@ -115,6 +117,7 @@
             money = money + forclick;
             cash = money + "$";
             document.getElementById('balance').innerHTML=cash;
+            
         }
         span.onclick = function() 
         {
@@ -131,6 +134,7 @@
         {
             if(money >= firstup)
             {
+                document.getElementById('sound1').play();
                 money = money - firstup;
                 firstup = Math.round(firstup * 1.2);
                 forclick = forclick + 1;
@@ -141,6 +145,7 @@
             }
             else
             {
+                document.getElementById('sound2').play();
                 modal.style.display = "block";
                 document.getElementById('modalwindow2').innerHTML = (firstup - money) + '$';
             }
@@ -149,6 +154,7 @@
         {
             if(money >= up2)
             {
+                document.getElementById('sound1').play();
                 money = money - up2;
                 up2 = Math.round(up2 * 1.2);
                 forclick = forclick + 10;
@@ -159,13 +165,16 @@
             }
             else
             {
-                alert('Недостаточно денег\nВам необходимо ещё: ' + (up2 - money) + '$' );
+                document.getElementById('sound2').play();
+                modal.style.display = "block";
+                document.getElementById('modalwindow2').innerHTML = (up2 - money) + '$';
             }
         }
         upb3.onclick = function()//Улучшение 3
         {
             if(money >= up3)
-            {
+            {   
+                document.getElementById('sound1').play();
                 money = money - up3;
                 up3 = Math.round(up3 * 1.2);
                 forclick = forclick + 100;
@@ -176,13 +185,16 @@
             }
             else
             {
-                alert('Недостаточно денег\nВам необходимо ещё: ' + (up3 - money) + '$' );
+                document.getElementById('sound2').play();
+                modal.style.display = "block";
+                document.getElementById('modalwindow2').innerHTML = (up3 - money) + '$';
             }
         }
         upb4.onclick = function()//Улучшение 4
         {
             if(money >= up4)
-            {
+            {   
+                document.getElementById('sound1').play();
                 money = money - up4;
                 up4 = Math.round(up4 * 1.2);
                 forclick = forclick + 500;
@@ -193,13 +205,16 @@
             }
             else
             {
-                alert('Недостаточно денег\nВам необходимо ещё: ' + (up4 - money) + '$' );
+                document.getElementById('sound2').play();
+                modal.style.display = "block";
+                document.getElementById('modalwindow2').innerHTML = (up4 - money) + '$';
             }
         }
         upb5.onclick = function()//Улучшение 5
         {
             if(money >= up5)
             {
+                document.getElementById('sound1').play();
                 money = money - up5;
                 up5 = Math.round(up5 * 1.2);
                 forclick = forclick + 1000;
@@ -210,13 +225,16 @@
             }
             else
             {
-                alert('Недостаточно денег\nВам необходимо ещё: ' + (up5 - money) + '$' );
+                document.getElementById('sound2').play();
+                modal.style.display = "block";
+                document.getElementById('modalwindow2').innerHTML = (up5 - money) + '$';
             }
         }
         upforsecb1.onclick = function()
         {
             if(money >= forsec1)
             {
+                document.getElementById('sound1').play();
                 money = money - forsec1;
                 forsec1 = Math.round(forsec1 * 1.2);
                 forsec = forsec + 1;
@@ -227,13 +245,16 @@
             }
             else
             {
-                alert('Недостаточно денег\nВам необходимо ещё: ' + (forsec1 - money) + '$' );
+                document.getElementById('sound2').play();
+                modal.style.display = "block";
+                document.getElementById('modalwindow2').innerHTML = (forsec1 - money) + '$';
             }
         }
         upforsecb2.onclick = function()
         {
             if(money >= forsec2)
             {
+                document.getElementById('sound1').play();
                 money = money - forsec2;
                 forsec2 = Math.round(forsec2 * 1.2);
                 forsec = forsec + 10;
@@ -244,13 +265,16 @@
             }
             else
             {
-                alert('Недостаточно денег\nВам необходимо ещё: ' + (forsec2 - money) + '$' );
+                document.getElementById('sound2').play();
+                modal.style.display = "block";
+                document.getElementById('modalwindow2').innerHTML = (forsec2 - money) + '$';
             }
         }
         upforsecb3.onclick = function()
         {
             if(money >= forsec3)
             {
+                document.getElementById('sound1').play();
                 money = money - forsec3;
                 forsec3 = Math.round(forsec3 * 1.2);
                 forsec = forsec + 100;
@@ -261,13 +285,16 @@
             }
             else
             {
-                alert('Недостаточно денег\nВам необходимо ещё: ' + (forsec3 - money) + '$' );
+                document.getElementById('sound2').play();
+                modal.style.display = "block";
+                document.getElementById('modalwindow2').innerHTML = (forsec3 - money) + '$';
             }
         }
         upforsecb4.onclick = function()
         {
             if(money >= forsec4)
             {
+                document.getElementById('sound1').play();
                 money = money - forsec4;
                 forsec4 = Math.round(forsec4 * 1.2);
                 forsec = forsec + 1000;
@@ -278,13 +305,16 @@
             }
             else
             {
-                alert('Недостаточно денег\nВам необходимо ещё: ' + (forsec4 - money) + '$' );
+                document.getElementById('sound2').play();
+                modal.style.display = "block";
+                document.getElementById('modalwindow2').innerHTML = (forsec4 - money) + '$';
             }
         }
         upforsecb5.onclick = function()
         {
             if(money >= forsec5)
             {
+                document.getElementById('sound1').play();
                 money = money - forsec5;
                 forsec5 = Math.round(forsec5 * 1.2);
                 forsec = forsec + 5000;
@@ -295,7 +325,9 @@
             }
             else
             {
-                alert('Недостаточно денег\nВам необходимо ещё: ' + (forsec5 - money) + '$' );
+                document.getElementById('sound2').play();
+                modal.style.display = "block";
+                document.getElementById('modalwindow2').innerHTML = (forsec5 - money) + '$';
             }
         }
         function tick()
