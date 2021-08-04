@@ -17,7 +17,12 @@
     <div id="myModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
-          <center id='modalbox'><span id = 'modalwindow1' value='Вам не хватает ',font-align='center'>Вам не хватает </span><span id='modalwindow2',font-align='center'>0$</span></center>
+          <div>
+            <center id='modalbox'>
+                <span id = 'modalwindow1' value='Вам не хватает '>Вам не хватает </span><span id='modalwindow2',>0$</span>
+                <br><br>
+            </center>
+          </div>
         </div>
       </div>
     <div id="timer"></div>
@@ -34,56 +39,80 @@
     <button id = 'cookie'><img src="cookie.png", ></button>
     <br>
     <br>
-    <h3 id='ForClickHeader'>Улучшения производства печенья за клик</h3>
-    <br>
-    <input type='button', id='upb1', value = 'Улучшить'>
-    <span id = 'firstupt', >20$</span>
-    <br>
-    <br>
-    <input type='button', id='upb2', value = 'Улучшить'>
-    <span id = 'upt2', value='2000$' >2000$</span> 
-    <br>
-    <br>
-    <input type='button', id='upb3', value = 'Улучшить'>
-    <span id = 'upt3', value='15000$' >15000$</span> 
-    <br>
-    <br>
-    <input type='button', id='upb4', value = 'Улучшить'>
-    <span id = 'upt4', value='100000$' >100000$</span> 
-    <br>
-    <br>
-    <input type='button', id='upb5', value = 'Улучшить'>
-    <span id = 'upt5', value='500000$' >500000$</span> 
 
+    <div class='updatebutton', class='updateforclck'>     <!-- Update for click buttons-->
+        <h3 id='ForClickHeader'>Улучшения производства печенья за клик</h3>
+        <br>
+        <div class='updatebutton', id ='1button'>
+            <input type='button', id='upb1', value = 'Улучшить'>
+            <span id = 'firstupt', >20$</span>
+        </div>
+        <br>
+        <br>
+        <div class='updatebutton', id ='2button'>
+            <input type='button', id='upb2', value = 'Улучшить'>
+            <span id = 'upt2', value='2000$' >2000$</span> 
+        </div>
+        <br>
+        <br>
+        <div class='updatebutton', id ='3button'>
+            <input type='button', id='upb3', value = 'Улучшить'>
+            <span id = 'upt3', value='15000$' >15000$</span>  
+        </div>
+        <br>
+        <br>
+        <div class='updatebutton', id ='4button'>
+            <input type='button', id='upb4', value = 'Улучшить'>
+            <span id = 'upt4', value='100000$' >100000$</span>
+        </div>
+        <br>
+        <br>
+        <div class='updatebutton', id ='5button'>
+            <input type='button', id='upb5', value = 'Улучшить'>
+            <span id = 'upt5', value='500000$' >500000$</span>         
+        </div>
+    </div>
 
-    <h4 id='ForSecHeader'>Улучшения производства печенья за секунду</h4> 
+    <div class='updatebutton', class='updateforsec'>      <!-- Update for second buttons-->  
+        <h4 id='ForSecHeader'>Улучшения производства печенья за секунду</h4> 
+        <br>
+        <div class='updatebutton', id='button6'>
+            <input type='button', id='upforsecb1', value = 'Улучшить'>
+            <span id = 'upforsect1', >100$</span>            
+        </div>
+        <br>
+        <br>
+        <div class='updatebutton', id='button7'>
+            <input type='button', id='upforsecb2', value = 'Улучшить'>
+            <span id = 'upforsect2', value='5000$' >5000$</span>             
+        </div>
+        <br>
+        <br>
+        <div class='updatebutton', id='button8'>
+            <input type='button', id='upforsecb3', value = 'Улучшить'>
+            <span id = 'upforsect3', value='20000$' >20000$</span>             
+        </div>
+        <br>
+        <br>
+        <div class='updatebutton', id='button9'>
+            <input type='button', id='upforsecb4', value = 'Улучшить'>
+            <span id = 'upforsect4', value='1000000$' >100000$</span>             
+        </div>
+        <br>
+        <br>
+        <div class='updatebutton', id='button10'>
+            <input type='button', id='upforsecb5', value = 'Улучшить'>
+            <span id = 'upforsect5', value='5000000$' >500000$</span>             
+        </div>
+    </div>
     <br>
-    <input type='button', id='upforsecb1', value = 'Улучшить'>
-    <span id = 'upforsect1', >100$</span>
     <br>
     <br>
-    <input type='button', id='upforsecb2', value = 'Улучшить'>
-    <span id = 'upforsect2', value='5000$' >5000$</span> 
-    <br>
-    <br>
-    <input type='button', id='upforsecb3', value = 'Улучшить'>
-    <span id = 'upforsect3', value='20000$' >20000$</span> 
-    <br>
-    <br>
-    <input type='button', id='upforsecb4', value = 'Улучшить'>
-    <span id = 'upforsect4', value='1000000$' >100000$</span> 
-    <br>
-    <br>
-    <input type='button', id='upforsecb5', value = 'Улучшить'>
-    <span id = 'upforsect5', value='5000000$' >500000$</span> 
-    <br>
-    <br>
-    <br>
-    <div id='DOESEntertainment'>
+    <div id='DOESEntertainment'> <!--link-->
         <div>
             Сделано 
         </div>
-        <div><a href='https://vk.com/droblox'>
+        <div><a href='https://vk.com/doodoesnt'>
             <font size="+1",color=#ff0000>@DOESNT</font></a></div>
         <div>
             в 2021 году
